@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function Testimonials() {
   const reviews = [
     {
@@ -17,22 +19,46 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-slate-950 text-white py-20 px-6 md:px-16">
-      <h2 className="text-4xl font-extrabold text-center mb-14 text-cyan-400 drop-shadow-md">
+    <section className="bg-gray-100 text-gray-800 py-20 px-6 md:px-16">
+      <motion.h2
+        className="text-3xl font-bold text-center mb-14"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         What Our Clients Say
-      </h2>
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      </motion.h2>
+      <motion.div
+        className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.3,
+            },
+          },
+        }}
+      >
         {reviews.map((review, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-white/5 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/10"
+            className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
           >
-            <p className="text-gray-300 italic text-base mb-6">“{review.quote}”</p>
-            <div className="text-cyan-300 font-semibold">{review.name}</div>
-            <div className="text-sm text-gray-400">{review.role}, {review.company}</div>
-          </div>
+            <p className="text-gray-600 italic text-base mb-6">“{review.quote}”</p>
+            <div className="text-blue-600 font-semibold">{review.name}</div>
+            <div className="text-sm text-gray-600">
+              {review.role}, {review.company}
+            </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

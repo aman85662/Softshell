@@ -22,20 +22,20 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="bg-slate-900 py-20 px-6 md:px-16 text-white">
-      <h2 className="text-4xl font-extrabold text-center mb-10 text-cyan-400 drop-shadow-md">
+    <section className="bg-gray-100 py-20 px-6 md:px-16 text-gray-800">
+      <h2 className="text-3xl font-bold text-center mb-10">
         Get In Touch
       </h2>
       <form
         onSubmit={handleSubmit}
-        className="max-w-3xl mx-auto bg-white/5 backdrop-blur-lg p-8 rounded-2xl shadow-xl grid grid-cols-1 gap-6"
+        className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md grid grid-cols-1 gap-6"
       >
         <input
           type="text"
           name="name"
           required
           placeholder="Your Name"
-          className="bg-slate-800 text-white px-4 py-3 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          className="bg-gray-50 text-gray-800 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
           onChange={handleChange}
         />
         <input
@@ -43,7 +43,7 @@ export default function ContactForm() {
           name="email"
           required
           placeholder="Your Email"
-          className="bg-slate-800 text-white px-4 py-3 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          className="bg-gray-50 text-gray-800 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
           onChange={handleChange}
         />
         <input
@@ -51,13 +51,13 @@ export default function ContactForm() {
           name="company"
           placeholder="Company Name"
           required
-          className="bg-slate-800 text-white px-4 py-3 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          className="bg-gray-50 text-gray-800 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
           onChange={handleChange}
         />
         <select
           name="licenseType"
           required
-          className="bg-slate-800 text-white px-4 py-3 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          className="bg-gray-50 text-gray-800 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
           onChange={handleChange}
         >
           <option value="">Select License Type</option>
@@ -71,12 +71,12 @@ export default function ContactForm() {
           placeholder="Your Message"
           rows={4}
           required
-          className="bg-slate-800 text-white px-4 py-3 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+          className="bg-gray-50 text-gray-800 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
           onChange={handleChange}
         ></textarea>
         <button
           type="submit"
-          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 rounded-xl font-semibold text-lg transition duration-300"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold text-lg transition duration-300"
         >
           Submit
         </button>

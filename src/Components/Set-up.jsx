@@ -1,4 +1,5 @@
 import StepCard from "./stepCard.jsx";
+import { motion } from "framer-motion";
 
 export default function SetUp() {
   const steps = [
@@ -20,20 +21,45 @@ export default function SetUp() {
   ];
 
   return (
-    <section className="bg-gradient-to-r from-indigo-700 to-purple-800 py-10 px-4 sm:py-16 sm:px-6 text-white text-center">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-10">
-        Three easy steps to cash in your software
-      </h2>
-      <div className="flex flex-col gap-8 sm:flex-row sm:justify-center sm:items-center sm:gap-10">
+    <section className="bg-gray-100 py-10 px-4 sm:py-16 sm:px-6 text-gray-800 text-center">
+      <motion.h2
+        className="text-3xl font-bold mb-8 sm:mb-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        How It Works
+      </motion.h2>
+      <motion.div
+        className="flex flex-col gap-8 sm:flex-row sm:justify-center sm:items-center sm:gap-10"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.3,
+            },
+          },
+        }}
+      >
         {steps.map((step) => (
-          <StepCard
+          <motion.div
             key={step.number}
-            number={step.number}
-            title={step.title}
-            description={step.description}
-          />
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <StepCard
+              number={step.number}
+              title={step.title}
+              description={step.description}
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
