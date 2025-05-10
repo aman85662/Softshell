@@ -1,9 +1,18 @@
 import React from 'react';
+import SetUP from './Components/Set-up.jsx';
+import Hero from './Components/Hero-section.jsx';
+import WhyChooseUs from './Components/Why-choose-us.jsx';
+import Testimonials from './Components/testomonials.jsx';
+import ContactForm from './Components/ContactForm.jsx';
 
 const App = () => {
   return (
     <div>
-      <h1 class="text-gray-500 text-center">SoftShell</h1>
+      <Hero/>
+       <SetUP/>
+      <WhyChooseUs/>
+      <Testimonials/>
+      <ContactForm/>
     </div>
   );
 }
