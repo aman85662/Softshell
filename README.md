@@ -1,12 +1,42 @@
-# React + Vite
+# 🚀 SoftSell - Software License Resale Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SoftSell** is a responsive, single-page marketing website for a fictional startup that helps users resell unused software licenses. Built using **React**, **TailwindCSS**, and **Framer Motion** for smooth animations, this project demonstrates clean code, strong UI/UX, and quick deployment practices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
 
-## Expanding the ESLint configuration
+- ✅ **Hero Section** with headline, subheading, and call-to-action button
+- 🔄 **How It Works** step-by-step process (with icons)
+- 🌟 **Why Choose Us** feature highlights with visual tiles
+- 🗣️ **Customer Testimonials** section with dummy reviews
+- 📬 **Contact / Lead Form** with frontend validation
+- 🎨 Fully **responsive design** (mobile, tablet, desktop)
+- ✨ **Framer Motion animations** for a smooth user experience
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- **React** – Frontend framework
+- **Tailwind CSS** – Utility-first styling
+- **Framer Motion** – Animations and transitions
+
+---
+
+## 📂 Folder Structure
+
+softsell/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── Hero.jsx
+│ │ ├── HowItWorks.jsx
+│ │ ├── WhyChooseUs.jsx
+│ │ ├── Testimonials.jsx
+│ │ └── ContactForm.jsx
+│ ├── App.jsx
+│ └── index.js
+├── tailwind.config.js
+├── package.json
+└── README.md
